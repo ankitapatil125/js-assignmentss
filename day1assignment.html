@@ -1,0 +1,50 @@
+<html>
+    <head> ankita patil
+        <title>
+            js current day and time
+        </title>
+    </head>
+    <body>
+        <script>
+            var today=new day();
+            var day=today.getDay();
+            days=["sunday","monday","tue","wed","thu","fri","sat"];
+
+            console.log("today is :"+days[day]+".");
+           
+            var hour=today.getHours();
+            var minuts=today.getMinutes();
+            var second=today.getSeconds();
+            
+             var t=(hour>=12)  ? "PM":"AM";
+             hour=(hour>=12)? hour -12:hour;
+             if(hour===0 && t==='PM')
+             {
+             if(minuts===0 && second===0)
+             {
+                 hour=12;
+                 t='noon';
+             }
+             else
+             {
+                 hour=12
+                 t='PM';
+             }
+            }
+            if (hour===0 && t==='AM')
+            {
+           if(minitus===0 && second===0)
+           {
+               hour=12;
+               t='MIDNIGHT';
+           }
+           else{
+               hour=12;
+               t='AM';
+           }
+           }
+        
+        console.log("current time:"+hour +t":"+minutes +":"+second);
+        </script>
+    </body>
+</html>
